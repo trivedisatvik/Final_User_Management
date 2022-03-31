@@ -91,7 +91,7 @@
     }
     else{
         
-     const response=  await axios.post('http://localhost:7000/users/',{
+     const response=  await axios.post('https://user-management-satvik.herokuapp.com/users/',{
                 first_name:this.first_name,
                last_name:this.last_name,
                email:this.email,

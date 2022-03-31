@@ -50,9 +50,9 @@ export default {
     methods:{
         async handleSubmit(){
             
-            const response = await axios.post('http://localhost:7000/users/requestPasswordReset',{
+            const response = await axios.post('https://user-management-satvik.herokuapp.com/users/requestPasswordReset',{
                 email:this.email,
-                redirectUrl:'http://localhost:3000/resetpassword'
+                redirectUrl:'https://user-management-satvik.herokuapp.com/resetpassword'
                 
             });
             if(response.data.status==='failed'){

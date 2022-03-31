@@ -41,7 +41,7 @@ export default {
       }
   },
    async created(){
-    const response = await axios.get(`http://localhost:7000/users/${localStorage.getItem('userId')}`,{
+    const response = await axios.get(`https://user-management-satvik.herokuapp.com/users/${localStorage.getItem('userId')}`,{
       headers:{
         Authorization:'Bearer ' + localStorage.getItem('token')
       }
@@ -51,7 +51,7 @@ export default {
   methods:{
       async handleSubmit(){
           
-            const response = await axios.post(`http://localhost:7000/users/checkpwd/${localStorage.getItem('userId')}`,{
+            const response = await axios.post(`https://user-management-satvik.herokuapp.com/checkpwd/${localStorage.getItem('userId')}`,{
                 oldpwd:this.oldpwd,
                 
             });
@@ -66,7 +66,7 @@ export default {
             else{
                 this.loginalertt = "";
                 console.log("Hy")
-               const nresponse = await axios.delete(`http://localhost:7000/users/${localStorage.getItem('userId')}`)
+               const nresponse = await axios.delete(`https://user-management-satvik.herokuapp.com/users/${localStorage.getItem('userId')}`)
                
 
                if(nresponse.data.status==='success'){

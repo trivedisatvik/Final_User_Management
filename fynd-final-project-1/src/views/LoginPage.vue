@@ -46,7 +46,7 @@ export default {
     },
     methods:{
         async handleSubmit(){
-            const response = await axios.post('http://localhost:7000/users/login',{
+            const response = await axios.post('https://user-management-satvik.herokuapp.com/users/login',{
                 email:this.email,
                 password:this.password
             });

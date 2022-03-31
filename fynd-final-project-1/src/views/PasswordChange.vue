@@ -81,7 +81,7 @@ export default {
         const splitURL=curl.toString().split("/");
         
         
-     const response=  await axios.post('http://localhost:7000/users/resetPassword',{
+     const response=  await axios.post('https://user-management-satvik.herokuapp.com/users/resetPassword',{
                 userId:splitURL[4],
                 resetString:splitURL[5],
                 newPassword:this.npwd,

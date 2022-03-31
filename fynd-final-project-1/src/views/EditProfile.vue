@@ -88,7 +88,7 @@ export default {
 
     },
     async created(){
-    const response = await axios.get(`http://localhost:7000/users/${localStorage.getItem('userId')}`,{
+    const response = await axios.get(`https://user-management-satvik.herokuapp.com/users/${localStorage.getItem('userId')}`,{
       headers:{
         Authorization:'Bearer ' + localStorage.getItem('token')
       }
@@ -111,7 +111,7 @@ export default {
     
     methods:{
         async handleSubmit(){
-            const response = await axios.patch(`http://localhost:7000/users/${localStorage.getItem('userId')}`,{
+            const response = await axios.patch(`https://user-management-satvik.herokuapp.com/users/${localStorage.getItem('userId')}`,{
                  first_name:this.first_name,
             last_name:this.last_name,
             phoneNo:this.phoneNo,
