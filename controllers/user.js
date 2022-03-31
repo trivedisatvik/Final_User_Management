@@ -81,7 +81,7 @@ const create_user = (req,res,next)=>{
 };
 const sendVerificationEmail=({_id,email},res)=>{
 
-    const currenturl = "http://localhost:7000/";
+    const currenturl = "https://user-management-satvik.herokuapp.com/";
     const uniqueString = uuidv4() + _id;
 
     const mailOptions = {
@@ -193,7 +193,7 @@ const verify_user_acc = (req,res)=>{
                             UserVerification.deleteOne({userId})
                             .then(
                                 ()=>{
-                                  return  res.redirect("http://localhost:3000/emailsuccess")
+                                  return  res.redirect("https://user-management-satvik.herokuapp.com/emailsuccess")
                                 }
                             )
                             .catch(err=>{
@@ -262,9 +262,9 @@ const get_all_users = (req,res,next)=>{
                     user,
                     request:{
                         type:"GET",
-                        url:`http://localhost:7000/users/${user._id}`,
+                        url:`https://user-management-satvik.herokuapp.com/users/${user._id}`,
                     },
-                    order:user.order,
+                    
                    
                 }
             })
