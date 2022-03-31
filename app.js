@@ -31,10 +31,10 @@ app.use(morgan("dev"));
 
 
 
-// app.get("/",(req,res,next)=>{
-//     res.json({message:"This works, thankyou"})
-//     next();
-// });
+app.get("/",(req,res,next)=>{
+    res.json({message:"This works, thankyou"})
+    next();
+});
 app.use("/users",userRouter);
 
 const PORT=process.env.PORT;
