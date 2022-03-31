@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix fynd-final-project-1 && npm run build --prefix fynd-final-project-1"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix fynd-final-project-1 && npm run build --prefix fynd-final-project-1"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "mongoose": "^6.2.4",
     "morgan": "^1.10.0",
     "nodemailer": "^6.7.2",
+    "path": "^0.12.7",
     "uuid": "^8.3.2"
   }
 }

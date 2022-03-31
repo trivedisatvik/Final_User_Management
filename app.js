@@ -31,11 +31,22 @@ app.use(morgan("dev"));
 
 
 
-app.get("/",(req,res,next)=>{
-    res.json({message:"This works, thankyou"})
-    next();
-});
+// app.get("/",(req,res,next)=>{
+//     res.json({message:"This works, thankyou"})
+//     next();
+// });
 app.use("/users",userRouter);
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static(path.join(__dirname,'/fynd-final-project-1/build')));
+    app.get('*',(req,res)=>{
+        res.sendFile(path.join(__dirname,'fynd-final-project-1','build','index.html'))
+    })
+}
+else{
+    app.get("/",(req,res)=>{
+        res.send("api Running")
+    })
+}
 
 const PORT=process.env.PORT;
 const server = http.createServer(app);
