@@ -51,7 +51,7 @@ export default {
   methods:{
       async handleSubmit(){
           
-            const response = await axios.post(`https://user-management-satvik.herokuapp.com/checkpwd/${localStorage.getItem('userId')}`,{
+            const response = await axios.post(`https://user-management-satvik.herokuapp.com/users/checkpwd/${localStorage.getItem('userId')}`,{
                 oldpwd:this.oldpwd,
                 
             });
