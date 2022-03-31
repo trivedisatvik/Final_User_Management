@@ -45,7 +45,7 @@
                         <input type="submit" name="" value="Sign Up" id="register-btn">
                     </div>
                     <div class="inputBx">
-                       <p>Already have an account?  <router-link to="/login" id="login-link">Sign In</router-link></p>
+                       <p>Already have an account?  <router-link to="/" id="login-link">Sign In</router-link></p>
                     </div>
                 </form>
             </div>

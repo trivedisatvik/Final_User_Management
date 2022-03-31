@@ -27,7 +27,7 @@
                         <input type="submit" id="forgot-btn" name="" value="Reset Password">
                     </div>
                     <div class="inputBx">
-                       <p><router-link to="/login" id="back-link">Back To Sign In</router-link> </p>
+                       <p><router-link to="/" id="back-link">Back To Sign In</router-link> </p>
                     </div>
                 </form>
             </div>
