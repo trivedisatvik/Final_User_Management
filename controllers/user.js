@@ -747,7 +747,7 @@ const change_password_new =(req,res,next)=>{
 const check_password = (req,res,next)=>{
     const userId = req.params.userId
     const pwdd = req.body.oldpwd
-    User.find({userId})
+    User.find({_id:userId})
     .exec()
     .then(user=>{
         if(user.length>0){
