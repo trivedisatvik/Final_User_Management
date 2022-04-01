@@ -59,7 +59,7 @@ export default {
             
             
             if(response.data.status==='failed'){
-                
+
                 this.loginalertt = response.data.message;
                 
 
@@ -195,5 +195,24 @@ form .input-box input{
 }
 .input-box.button input:hover{
     background: #5D478B;
+}
+@media (max-width:584px){
+    div.content {
+  margin: 10px 10px;
+  
+  
+}
+.bodyClass{
+    margin: 0px;
+    min-height: 30vh;
+
+}
+.wrapper{
+    margin:0px;
+}
+.wrapper h2{
+    padding:20px;
+}
+
 }
 </style>

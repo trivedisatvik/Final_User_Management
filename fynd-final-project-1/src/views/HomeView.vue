@@ -224,7 +224,7 @@ margin-bottom:25px;
   .wrapper{
     width:500px;
     flex-direction: column;
-    margin-top:300px;
+    margin-top:420px;
     
     align-items: center;
   }

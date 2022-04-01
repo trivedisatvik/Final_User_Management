@@ -278,16 +278,27 @@ form .button input:hover{
 
 }
 @media (max-width:584px){
+    div.content {
+  margin-left: 20px;
+  
+  height: 740px;
+}
     
     .bodyClass{
-       margin: 100px;
+       margin-top: 100px;
+       
        
     }
     .container{
-        max-width:100%;
-      
-        
-    }
+    max-width: 900px;
+    width:200%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   
+
+}
     form .user-details .input-box{
         margin-bottom: 15px;
         width:100%;
@@ -301,6 +312,7 @@ form .button input:hover{
         max-height: 300px;
         overflow-y:scroll;
     }
+    
     .user-details::-webkit-scrollbar{
         width: 0;
     }

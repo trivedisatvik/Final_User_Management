@@ -260,6 +260,12 @@ background: #5029bc;
 
 }
 @media (max-width:950px){
+    div.content {
+  margin-left: 20px;
+  
+  
+  
+}
    .container{
     width:90%;
    
@@ -268,7 +274,13 @@ background: #5029bc;
    
 } 
 }
-@media (max-width:820px){
+@media (max-width:584px){
+      div.content {
+  margin-left: 20px;
+  
+  
+  
+}
    .container{
    margin: 40px 0;
    height: 100%;

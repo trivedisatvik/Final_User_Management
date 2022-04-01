@@ -241,4 +241,23 @@ form .input-box input{
 .input-box.button input:hover{
     background: #0e4bf1;
 }
+@media (max-width:584px){
+    div.content {
+  margin: 10px 10px;
+  
+  
+}
+.bodyClass{
+    margin: 0px;
+    min-height: 30vh;
+
+}
+.wrapper{
+    margin:0px;
+}
+.wrapper h2{
+    padding:20px;
+}
+
+}
 </style>
