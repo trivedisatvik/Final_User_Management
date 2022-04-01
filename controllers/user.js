@@ -761,7 +761,7 @@ const check_password = (req,res,next)=>{
                 else{
                     return res.json({
                         status:'failed',
-                        message:"Wrong Password",
+                        message:"Wrong Passworddd",
                     })
                 }
 
