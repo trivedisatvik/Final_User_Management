@@ -1,4 +1,5 @@
 <template>
+<div>
 <SidebarMenu v-if="user"/>
 <div class="content">
 <div class="bodyClasss" v-if="user">
@@ -58,6 +59,7 @@
 
             </div>
         </div>
+    </div>
     </div>
     </div>
 </template>

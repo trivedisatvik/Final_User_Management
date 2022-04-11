@@ -1,4 +1,5 @@
 <template>
+<div>
 <SidebarMenu v-if="user"/>
 <div class="content">
 <div class="bodyClass" v-if="user">
@@ -29,6 +30,7 @@
 
             </div>
         </form>
+    </div>
     </div>
     </div>
     </div>
