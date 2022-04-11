@@ -12,14 +12,23 @@
         <form action="" @submit.prevent="handleSubmit">
             <div class="input-box">
                 <input type="password"  placeholder="Current Password" required v-model="oldpwd">
+                 <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle">
+                       </span>
                 
             </div>
             <div class="input-box">
                 <input type="password"  placeholder="New Password" required v-model="password">
+                 <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle1">
+                       </span>
 
             </div>
             <div class="input-box">
                 <input type="password"  placeholder="Confirm Password" required v-model="cpwd">
+                  <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle2">
+                       </span>
 
             </div>
             <div class="">
@@ -52,7 +61,10 @@ export default {
           user:null,
           loginalertt:"",
           alerttSuccess:"",
-          palertt:""
+          palertt:"",
+          state:false,
+          state1:false,
+          state2:false
       }
   },
    async created(){
@@ -109,7 +121,40 @@ export default {
            
             
 
-        }
+        },
+         toggle(){
+             if(this.state){
+                 document.getElementById("cupassword").setAttribute("type","password");
+                 this.state=false;
+             }
+             else{
+                 document.getElementById("cupassword").setAttribute("type","text");
+                 this.state=true;
+             }
+
+         },
+        toggle1(){
+             if(this.state1){
+                 document.getElementById("rpassword").setAttribute("type","password");
+                 this.state1=false;
+             }
+             else{
+                 document.getElementById("rpassword").setAttribute("type","text");
+                 this.state1=true;
+             }
+
+         },
+         toggle2(){
+             if(this.state2){
+                 document.getElementById("cpassword").setAttribute("type","password");
+                 this.state2=false;
+             }
+             else{
+                 document.getElementById("cpassword").setAttribute("type","text");
+                 this.state2=true;
+             }
+
+         }
 
    }
 
@@ -242,6 +287,13 @@ form .input-box input{
 }
 .input-box.button input:hover{
     background: #0e4bf1;
+}
+.eye{
+    width:15px;
+    position: absolute;
+   
+    transform: translate(-150%,90%);
+    
 }
 @media (max-width:584px){
     div.content {

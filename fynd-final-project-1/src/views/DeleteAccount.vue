@@ -12,6 +12,9 @@
         <form action="" @submit.prevent="handleSubmit">
             <div class="input-box">
                 <input type="password"  placeholder="Current Password" required v-model="oldpwd">
+                <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle">
+                       </span>
                 
             </div>
             
@@ -39,6 +42,7 @@ export default {
           oldpwd:"",
           user:null,
           loginalertt:"",
+           state:false
           
       }
   },
@@ -81,7 +85,18 @@ export default {
             }
             
 
-        }
+        },
+          toggle(){
+             if(this.state){
+                 document.getElementById("password").setAttribute("type","password");
+                 this.state=false;
+             }
+             else{
+                 document.getElementById("password").setAttribute("type","text");
+                 this.state=true;
+             }
+
+         },
 
   }
 
@@ -148,6 +163,13 @@ div.content {
     padding-bottom: 0px;
     font-size: 20px;
     font-weight: 600;
+}
+.eye{
+    width:15px;
+    position: absolute;
+   
+    transform: translate(-150%,90%);
+    
 }
 .wrapper h3{
     margin-top:10px ;

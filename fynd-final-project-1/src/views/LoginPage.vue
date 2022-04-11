@@ -16,6 +16,9 @@
                     <div class="inputBx">
                         <span>Password</span>
                         <input type="password" name="password" id="password" placeholder="Password" required v-model="password">
+                          <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle1">
+                       </span>
                     </div>
                     <div class="remember">
                         <!-- <label><input type="checkbox" name="rem" id="customCheck" >Remember me</label> -->
@@ -42,6 +45,7 @@ export default {
             email:'',
             password:'',
             loginalertt:'',
+            state1:false,
             }
     },
     methods:{
@@ -64,7 +68,19 @@ export default {
             }
             
 
-        }
+        },
+        toggle1(){
+            
+             if(this.state1){
+                 document.getElementById("password").setAttribute("type","password");
+                 this.state1=false;
+             }
+             else{
+                 document.getElementById("password").setAttribute("type","text");
+                 this.state1=true;
+             }
+
+         },
     }
 
 }
@@ -169,6 +185,13 @@ section .contentBx .formBx .inputBx input{
     color: #607d8b;
     background: transparent;
     border-radius: 30px;
+}
+.eye{
+    width:15px;
+    position: absolute;
+   
+    transform: translate(-150%,60%);
+    
 }
 #content-forget{
     margin-bottom: 10px;
