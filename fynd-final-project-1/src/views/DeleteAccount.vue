@@ -11,7 +11,7 @@
              
         <form action="" @submit.prevent="handleSubmit">
             <div class="input-box">
-                <input type="password"  placeholder="Current Password" required v-model="oldpwd">
+                <input type="password"  placeholder="Current Password" required v-model="oldpwd" id="password">
                 <span class="eye">
                        <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle">
                        </span>
@@ -72,7 +72,7 @@ export default {
             }
             else{
                 this.loginalertt = "";
-                console.log("Hy")
+              
                const nresponse = await axios.delete(`https://user-management-satvik.herokuapp.com/users/${localStorage.getItem('userId')}`)
                
 

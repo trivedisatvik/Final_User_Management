@@ -11,21 +11,21 @@
                     </div>
         <form action="" @submit.prevent="handleSubmit">
             <div class="input-box">
-                <input type="password"  placeholder="Current Password" required v-model="oldpwd">
+                <input type="password"  placeholder="Current Password" required v-model="oldpwd" id="cupassword">
                  <span class="eye">
                        <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle">
                        </span>
                 
             </div>
             <div class="input-box">
-                <input type="password"  placeholder="New Password" required v-model="password">
+                <input type="password"  placeholder="New Password" required v-model="password" id="rpassword">
                  <span class="eye">
                        <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle1">
                        </span>
 
             </div>
             <div class="input-box">
-                <input type="password"  placeholder="Confirm Password" required v-model="cpwd">
+                <input type="password"  placeholder="Confirm Password" required v-model="cpwd" id="cpassword">
                   <span class="eye">
                        <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle2">
                        </span>
