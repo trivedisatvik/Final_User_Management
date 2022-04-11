@@ -31,10 +31,16 @@
                     <div class="inputBx">
                         <span>Password</span>
                         <input type="password" id="rpassword" name="password" placeholder="Password" required v-model="password">
+                         <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle1">
+                       </span>
                     </div>
                     <div class="inputBx">
                         <span>Confirm Password</span>
                         <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required v-model="password_confirm">
+                        span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye2" @click="toggle2">
+                       </span>
                     </div>
                     <div class="inputBx">
                         <div id="passError" style="color:red;" v-text="palertt"></div>
@@ -67,7 +73,9 @@
                password_confirm:'',
                alertt:'',
                alerttSuccess:'',
-               palertt:''
+               palertt:'',
+               state1:false,
+               state2:false,
        
          }
 
@@ -123,6 +131,28 @@ else{
 
         
             
+         },
+         toggle1(){
+             if(this.state1){
+                 document.getElementById("rpassword").setAttribute("type","password");
+                 this.state1=false;
+             }
+             else{
+                 document.getElementById("rpassword").setAttribute("type","text");
+                 this.state1=true;
+             }
+
+         },
+         toggle2(){
+             if(this.state2){
+                 document.getElementById("cpassword").setAttribute("type","password");
+                 this.state2=false;
+             }
+             else{
+                 document.getElementById("cpassword").setAttribute("type","text");
+                 this.state2=true;
+             }
+
          }
      }
      
@@ -194,6 +224,13 @@ section .contentBx{
 section .contentBx .formBx{
     width: 50%;
 
+}
+.eye{
+    width:15px;
+    position: absolute;
+   
+    transform: translate(-150%,60%);
+    
 }
 section .contentBx .formBx h2{
     color:#607d8b;
