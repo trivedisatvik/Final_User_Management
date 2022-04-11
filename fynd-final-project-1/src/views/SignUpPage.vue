@@ -38,7 +38,7 @@
                     <div class="inputBx">
                         <span>Confirm Password</span>
                         <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required v-model="password_confirm">
-                        span class="eye">
+                        <span class="eye">
                        <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye2" @click="toggle2">
                        </span>
                     </div>
