@@ -400,7 +400,7 @@ const user_login=(req,res,next)=>{
                             email:user[0].email,
                             accessLevel:user[0].accessLevel
                         },
-                        "satvik",
+                        process.env.AUTH_STRING,
                         {
                             expiresIn:"1h"
                         }
