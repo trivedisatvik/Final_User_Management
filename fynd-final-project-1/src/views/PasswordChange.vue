@@ -20,10 +20,17 @@
                     <div class="inputBx">
                         <span>New Password</span>
                         <input type="password" id="new-rpassword" name="new-password" placeholder="New Password" required v-model="npwd">
+                         <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye1" @click="toggle1">
+                       </span>
+
                     </div>
                     <div class="inputBx">
                         <span>Confirm Password</span>
                         <input type="password" id="new-cpassword" name="new-cpassword" placeholder="Confirm Password" required v-model="cnpwd">
+                        <span class="eye">
+                       <img src="../assets/eye-regular.svg" alt="" srcset=""  id="eye2" @click="toggle2">
+                       </span>
                     </div>
                    <div class="inputBx">
                         <div id="passError" style="color:red;" v-text="palertt"></div>
@@ -56,7 +63,9 @@ export default {
             cnpwd:'',
             alertt:'',
             alerttSuccess:'',
-            palertt:''
+            palertt:'',
+            state1:false,
+            state2:false,
         }
     },
     methods:{
@@ -118,6 +127,28 @@ else{
          },
          loginSubmit(){
              this.$router.push('/')
+         },
+         toggle1(){
+             if(this.state1){
+                 document.getElementById("new-rpassword").setAttribute("type","password");
+                 this.state1=false;
+             }
+             else{
+                 document.getElementById("new-rpassword").setAttribute("type","text");
+                 this.state1=true;
+             }
+
+         },
+         toggle2(){
+             if(this.state2){
+                 document.getElementById("new-cpassword").setAttribute("type","password");
+                 this.state2=false;
+             }
+             else{
+                 document.getElementById("new-cpassword").setAttribute("type","text");
+                 this.state2=true;
+             }
+
          }
     }
 
