@@ -390,12 +390,7 @@ const user_login=(req,res,next)=>{
         }
         else{
         bcryptjs.compare(req.body.password,user[0].password,(err,result)=>{
-            // if(err){
-            
-            //   return res.status(401).json({
-            //         message:"Auth failed"
-            //     })
-            // }
+           
                 if(result){
                     //generate jwt token here
                     
@@ -698,9 +693,9 @@ const change_password_new =(req,res,next)=>{
                                 
                                 //now update pwd
                                 User.updateOne({_id:userId},{$set:{password:hasheddNewPassword}})
-                                .then((barath)=>{
-                                   console.log(barath)
-                                   console.log(userId)
+                                .then((result)=>{
+                                   
+                                   
                                    return  res.json({
                                     status:"Success",
                                 message:`Password Reset Successfully`,
