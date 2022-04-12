@@ -6,7 +6,7 @@ const {create_user,get_all_users,get_single_user,delete_single_user,update_user,
 const checkAuth = require("../middlewares/auth-check.js")
 router.post("/",create_user);
 router.get("/verify/:userId/:uniqueString",verify_user_acc);
-router.get("/",get_all_users);
+router.get("/",checkAuth,get_all_users);
 router.post("/feedback/:userId",create_feedback)
 router.post("/changepwd/:userId",change_password_new)
 router.post("/requestPasswordReset",password_reset_request);
