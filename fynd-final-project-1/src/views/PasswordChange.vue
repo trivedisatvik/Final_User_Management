@@ -259,6 +259,13 @@ section .contentBx .formBx .inputBx input{
 #content-forget{
     margin-bottom: 10px;
 }
+.eye{
+    width:15px;
+    position: absolute;
+   
+    transform: translate(-150%,60%);
+    
+}
 section .contentBx .formBx .inputBx input[type="submit"]{
     background: #ff4584;
     color: #fff;
