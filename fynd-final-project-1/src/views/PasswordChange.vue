@@ -86,13 +86,12 @@ export default {
     }
     else{
         
-        const curl = window.location.href
-        const splitURL=curl.toString().split("/");
+       
         
         
      const response=  await axios.post('https://user-management-satvik.herokuapp.com/users/resetPassword',{
-                userId:splitURL[4],
-                resetString:splitURL[5],
+                userId:this.$route.params.id,
+                resetString:this.$route.params.uniqueString,
                 newPassword:this.npwd,
 
             })
@@ -107,9 +106,7 @@ export default {
                 loginBtn.style.display="";
 
             }
-            console.log(response.data.status);
-            console.log(response.data.message);
-       // this.$router.push('/login');
+         
     }
     
 }
