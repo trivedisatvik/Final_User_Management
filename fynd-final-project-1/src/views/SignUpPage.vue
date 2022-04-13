@@ -92,8 +92,7 @@
         const text = "Password did not match"
         this.alertt='';
         this.palertt=text;
-        console.log(this.password);
-        console.log(this.password_confirm)
+        
 
 
     }
@@ -116,7 +115,7 @@
 
             }
             
-      // this.$router.push('/login');
+     
     }
     
 }
